@@ -1,8 +1,6 @@
-import { string } from 'prop-types'
-import React from 'react'
 
 type HeaderProps={
-    title:string,
+    title:string
 }
 
 export default function Header({title}:HeaderProps) {
