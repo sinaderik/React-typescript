@@ -3,9 +3,13 @@ import { useState } from 'react'
 import Header from './components/Header/Header'
 import Section from './components/Section/Section'
 import Counter from './components/Counter/Counter'
+import List from './components/List/List'
 
 export default function App() {
   const [count, setCount] = useState<number>(0)
+  const data: string[] = ['item 1', 'item 2', 'item 3', 'item 4']
+
+  
 
   return (
     <div>
@@ -16,6 +20,7 @@ export default function App() {
       <Counter setCount={setCount}>
         Count is {count}
       </Counter>
+      <List listItem={data} render={(item) =><h3>{item}</h3>} />
     </div>
   )
 }
